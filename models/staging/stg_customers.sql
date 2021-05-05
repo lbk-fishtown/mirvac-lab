@@ -1,5 +1,4 @@
 {# staging customers model #}
-{# staging customers model #}
 
 with source as (
 

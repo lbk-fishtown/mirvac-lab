@@ -1,4 +1,6 @@
 {# staging customers model #}
+{# staging customers model #}
+
 with source as (
 
     select * from {{ source('raw', 'raw_customers') }}

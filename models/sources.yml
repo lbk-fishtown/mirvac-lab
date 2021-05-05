@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw data loaded in for jaffle shop sales.
+    tables:
+      - name: raw_payments
+      
+      - name: raw_customers
+        description: Unique ID and First and Last name for customer.
+        columns:
+          - name: id
+            description: Primary key of the table
+            tests:
+              - unique
+              - not_null
+      
+      - name: raw_orders

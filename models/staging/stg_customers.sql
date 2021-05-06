@@ -1,8 +1,13 @@
+{# staging customers model #}
+
+{{
+    config(
+        schema='test_staging'
+    )
+}}
 
 with source as (
-
     select * from {{ source('raw', 'raw_customers') }}
-
 ),
 
 renamed as (
@@ -12,9 +17,7 @@ renamed as (
         first_name,
         last_name,
         first_name || ' ' || last_name as name
-
     from source
-
 )
 
 select * from renamed

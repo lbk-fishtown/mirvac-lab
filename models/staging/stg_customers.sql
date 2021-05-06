@@ -1,11 +1,5 @@
 {# staging customers model #}
 
-{{
-    config(
-        schema='test_staging'
-    )
-}}
-
 with source as (
     select * from {{ source('raw', 'raw_customers') }}
 ),
